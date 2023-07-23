@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+   <meta charset="utf-8"/>
+   <title>Adrian moto</title>
+   <meta name "description" content="Zobacz wszystko, co powinienes wiedziec o monitorach kkomputerowych w technikum informatycznym."/>
+   <meta name="keywords" content="Ząbkowice Ślaskie,zabkowice slaskie,Stacja diagnostyczna, Podstawowa Stacja Kontroli Pojazdów, Adrian-Moto,przeglady,cennik przeglądów " />
+   <meta http-equiv="X-UA-compatible" content="IE=edge,chrome=1"/>
+   <link rel="stylesheet" href="gl.css" type="text/css" />   
+  
+   <script src="timer.js"></script>
+    <style>
+      #status {
+        font-weight: bold;
+        font-size: 24px;
+      }
+      .open {
+        color: green;
+      }
+      .closed {
+        color: red;
+      }
+    </style>
+	
+</head>
+   
+<body onload="odliczanie();">
+ <div id="pojemnik">
+ 
+ 
+ 
+ 
+		<div id="kartka">
+		    <div id="logo"><h1><span class="lole">                                                                             </span> <div id="zegar">12:00:00</div></h1></div>
+																						<div id="kontakt">
+																									<div class="phone-number" onclick="copyPhoneNumber()">
+																										<div class="front"></div>
+																										<div class="back"><br><h3>+48 603 747 151<h3></br></div>
+																							        </div>
+																							<script>
+																								function copyPhoneNumber() {
+																									var phoneNumber = "+48 603 747 151";
+																									var tempInput = document.createElement("input");
+																									tempInput.value = phoneNumber;
+																									document.body.appendChild(tempInput);
+																									tempInput.select();
+																									document.execCommand("copy");
+																									document.body.removeChild(tempInput);
+																									alert("Numer telefonu został skopiowany do schowka: " + phoneNumber);
+																								}
+																							</script>
+																							
+																						</div>
+		    <div id="kontakt">
+			
+			
+			
+			
+			
+			
+				<div class="email-address" onclick="copyEmailAddress()">
+		<div class="front"></div>
+		<div class="back"><h3>milosz.<br>niedzwiedz2007</br>@gmail.com</h3></div>
+	</div>
+	<script>
+		function copyEmailAddress() {
+			var emailAddress = "milosz.niedzwiedz2007@gmail.com";
+			var tempInput = document.createElement("input");
+			tempInput.value = emailAddress;
+			document.body.appendChild(tempInput);
+			tempInput.select();
+			document.execCommand("copy");
+			document.body.removeChild(tempInput);
+			alert("Adres e-mail został skopiowany do schowka: " + emailAddress);
+		}
+	</script>
+																							
+																							
+																							
+			</div>
+		   
+
+
+
+
+
+		   <div class="block">Czym się zajmujemy?<br>Wykonujemy badania techniczne samochodów<br/> osobowych, ciągników rolniczych, przyczep rolniczych, przyczep samochodowych, motocykli, motorowerów o dopuszczalnej masie całkowitej do 3,5t. Również badania techniczne wszystkich wymienionych pojazdów sprowadzonych z zagranicy. Profesjonalnie kontrolujemy i diagnozujemy usterki w zawieszeniach. Dokonujemy geometrii osi przedniej pojazdów. Do każdego naszego klienta staramy się podejść indywidualnie i z maksymalnym zaangażowaniem. Posiadamy drugą siedzibie firmy w Ciepłowodach przy ulicy Kolejowej 15, w której wykonujemy naprawy bieżące w tym głównie : -Wymiana rozrządów -Naprawa zawieszeń -Naprawa hamulców -Lakierowaniem pojazdów -Profesjonalna konserwacja pojazdów</div>
+		
+		
+		</div>
+	
+	
+		
+		
+				<div id="usl">
+										<div id="kontakty">
+																							
+																							<div id="otwarcie">
+																							<div id="otw">Pon.:	08:00–18:00
+																									<br>Wt.:	08:00–18:00<br/>
+																									Śr.:	08:00–18:00
+																									<br>Czw.:	08:00–18:00</br>
+																									Pt.:	08:00–18:00
+																									<br>Sob.:	09:00–13:00</br>
+																									Niedz.:	Zamknięte</div>
+																								<div id="otww">
+																								
+																								
+																								
+																									<p id="status"></p>
+																									<script>
+																									  const statusElement = document.getElementById("status");
+																									  const now = new Date();
+																									  const dayOfWeek = now.getDay();
+																									  const hour = now.getHours();
+																									  const isOpen = (dayOfWeek >= 1 && dayOfWeek <= 5 && hour >= 8 && hour < 18) || (dayOfWeek === 6 && hour >= 9 && hour < 13);
+																									  statusElement.innerText = isOpen ? "  Stacja jest otwarta" : "  Stacja jest zamknięta";
+																									  statusElement.classList.add(isOpen ? "open" : "closed");
+																									</script>
+																								
+																								
+																								
+																								
+																								</div>
+																							
+																							</div>
+															<div id="cennik">
+															<h2>Cennik</h2>
+																
+														Przegląd auta osobowego – 98 zł.
+Przegląd samochodu z instalacją LPG – 161 zł.
+<br>Przegląd motocykla – 62 zł.</br>
+Przegląd motoroweru – 50 zł.
+<br>Przegląd ciągnika rolniczego – 62 zł.</br>
+Przegląd przyczepy rolniczej – 40 zł.
+<br>Przegląd przyczepy ciężarowej i specjalnej do 3,5 tony - 78 zł.</br>
+															
+															
+															</div>
+										
+										</div>
+				<div id="mapa">
+				
+				
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d447.7598905961921!2d16.828205775168186!3d50.59158074709613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470e2c0e2d10d7d1%3A0xebfaeac187c0c4ef!2sPodstawowa%20Stacja%20Kontroli%20Pojazd%C3%B3w%20%2C%2CAdrian-Moto%E2%80%9D!5e0!3m2!1spl!2spl!4v1685889083569!5m2!1spl!2spl" width="720" height="421" style="border:0;  border-radius: 16px;  " allowfullscreen="" loading="lazy"  referrerpolicy="no-referrer-when-downgrade"></iframe>
+				
+				
+				</div>
+				
+				</div>
+			
+	
+		   
+		   
+		
+	
+	       
+	
+	
+	
+	
+	
+        
+
+
+
+
+     </div>
+	 <div class="position-absolute width-full color-bg-default" style="bottom: -4rem;">
+  <div class="container-xl p-responsive">
+    <div class="d-flex flex-justify-center flex-lg-justify-end color-bg-default">
+      <div class="col-8 col-sm-7 col-md-6 col-lg-5 position-relative z-2 right-lg-n12 events-none">
+        <picture>
+          <source srcset="astro-mona.webp" type="image/webp">
+          <img src="astro-mona.svg" width="960" height="967" class="home-astro-mona width-full position-absolute bottom-0 height-auto" alt="Mona looking at GitHub activity across the globe">
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+ 
+ </html>
